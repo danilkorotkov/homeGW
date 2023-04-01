@@ -48,6 +48,10 @@ Chinese Weather Station Outdoor Sensor. Supports all station within FANJU brand,
 
 This example prints a dump of the raw packet it receives/identifies for each plugin.
 
+### allsensors.ino
+
+This example demonstrates how to reduce the code..
+
 ### hass_serial.ino
 
 This example outputs a JSON object for each packet it decodes.
