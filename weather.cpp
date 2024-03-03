@@ -42,8 +42,9 @@ uint8_t weather::getChannel(uint64_t packet) {
 }
 
 float weather::getTemperature(uint64_t packet) {
-	float temperature = float((packet >> 8) & 0xFFF) / 10;
-	return temperature;
+	float temperature = float((packet >> 8) & 0xFFF);
+	if (temperature > 0x0F00) {temperature = - (0x0FFF - temperature);}
+	return temperature / 10;
 }
 
 uint8_t weather::getHumidity(uint64_t packet) {
